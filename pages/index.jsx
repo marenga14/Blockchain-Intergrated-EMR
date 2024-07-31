@@ -535,18 +535,19 @@ const HomepageLayout = () => {
                   "One of the Best Blockchain Medical Record Systems available."
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  {/* <Image
-                    src="https://365psd.com/images/istock/previews/8717/87172655-female-doctor-icon-nurse-symbol-faceless-woman-doctor-with-a-stethoscope.jpg"
-                    width={500}
-                    height={500}
+                  <Image
+                    src="/images/87172655-female-doctor-icon-nurse-symbol-faceless-woman-doctor-with-a-stethoscope.jpg"
+                    width={250}
+                    height={250}
                     alt="Picture of the author"
-                  /> */}
+                  />
                   {/* <Image
                     avatar
                     src="https://365psd.com/images/istock/previews/8717/87172655-female-doctor-icon-nurse-symbol-faceless-woman-doctor-with-a-stethoscope.jpg"
                   /> */}
-                  <b>Dr Lim</b>, Surgeon at Pantai Hospital
                 </p>
+
+                <p>Dr Lim Surgeon at Pantai Hospital</p>
               </Grid.Column>
             </Grid.Row>
           </Grid>
