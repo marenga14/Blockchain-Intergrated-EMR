@@ -5,6 +5,7 @@ import { Link } from "../routes";
 import { Router } from "../routes";
 import record from "../ethereum/record";
 import web3 from "../ethereum/web3";
+import Image from "next/image";
 import {
   Button,
   Container,
@@ -12,7 +13,6 @@ import {
   Grid,
   Header,
   Icon,
-  Image,
   List,
   Menu,
   Segment,
@@ -37,7 +37,7 @@ const HomepageHeading = ({ mobile }) => (
     ></link>
     <Header
       as="h1"
-      content="Blockchain Medical Record System"
+      content="Blockchain-Intergrated EMR System"
       inverted
       style={{
         fontSize: mobile ? "2em" : "4em",
@@ -50,7 +50,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as="h2"
-      content="Ensure that your records are safe and sound"
+      content=""
       inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
@@ -469,8 +469,24 @@ const HomepageLayout = () => {
     <>
       <ResponsiveContainer>
         <Segment style={{ padding: "8em 0em" }} vertical>
-          <Grid container stackable verticalAlign="middle">
+          <Grid
+            stackable
+            className="bg-gray-100 rounded-md container py-10"
+            verticalAlign="middle"
+          >
             <Grid.Row>
+              <Grid.Column floated="left" width={8}>
+                {/* <img
+                  src="/images/8-Ways-to-Better-Secure-Patient-Medical-Records.jpg"
+                  alt="Doctor image"
+                /> */}
+                <Image
+                  src="/images/download.jpeg"
+                  width={500}
+                  height={500}
+                  alt="Picture of the author"
+                />
+              </Grid.Column>
               <Grid.Column width={8}>
                 <Header as="h3" style={{ fontSize: "2em" }}>
                   We Help Companies and Companions
@@ -488,18 +504,16 @@ const HomepageLayout = () => {
                   record systems.
                 </p>
               </Grid.Column>
-              <Grid.Column floated="right" width={6}>
-                <Image
-                  bordered
-                  rounded
-                  size="large"
-                  src="https://cdn.stocksnap.io/img-thumbs/960w/male-doctor_KN1OCKC4Y2.jpg"
-                />
-              </Grid.Column>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column textAlign="center">
-                <Button size="huge">Check Us Out</Button>
+                <Button
+                  style={{ backgroundColor: "green", color: "white" }}
+                  className="bg-green-200 text-white"
+                  size="huge"
+                >
+                  Check Us Out
+                </Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -521,10 +535,16 @@ const HomepageLayout = () => {
                   "One of the Best Blockchain Medical Record Systems available."
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  <Image
+                  {/* <Image
+                    src="https://365psd.com/images/istock/previews/8717/87172655-female-doctor-icon-nurse-symbol-faceless-woman-doctor-with-a-stethoscope.jpg"
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                  /> */}
+                  {/* <Image
                     avatar
                     src="https://365psd.com/images/istock/previews/8717/87172655-female-doctor-icon-nurse-symbol-faceless-woman-doctor-with-a-stethoscope.jpg"
-                  />
+                  /> */}
                   <b>Dr Lim</b>, Surgeon at Pantai Hospital
                 </p>
               </Grid.Column>
@@ -570,30 +590,124 @@ const HomepageLayout = () => {
           </Container>
         </Segment>
 
-        <Segment inverted vertical style={{ padding: "5em 0em" }}>
+        <Segment vertical container Container>
+          <div className="w-full my-10 px-10">
+            <div className=" justify-center flex gap-2">
+              <p className="font-bold text-3xl font-serif">
+                <span className="text-[#2E8BC0]">TOO</span>
+                <span className="text-[#2E8BC0] mr-5">LS</span>
+              </p>
+              <p className="font-bold text-3xl font-serif text-green-500 ">
+                <span className=" ">US</span>
+                <span className="  mr-5">ED</span>
+              </p>
+            </div>
+            <div className="h-96 container w-full flex flex-row gap-2 mb-5 rounded-md">
+              <div className="w-1/2 h-full bg-gray-50 flex flex-col">
+                <div className="flex justify-center">
+                  <Image
+                    className="rounded-full mt-1"
+                    width={250}
+                    height={250}
+                    src="/images/nextjs.png"
+                  />
+                </div>
+
+                <div className="flex justify-center my-2 text-3xl font-bold"></div>
+              </div>
+              <div className="w-1/2 h-full bg-gray-50 flex flex-col">
+                <div className="flex justify-center">
+                  <Image
+                    className="rounded-full mt-1"
+                    width={250}
+                    height={250}
+                    src="/images/ethers.jpeg"
+                  />
+                </div>
+
+                <div className="flex justify-center my-2 text-3xl font-bold">
+                  Ethers
+                </div>
+              </div>
+            </div>
+            <div className="h-96 container w-full flex flex-row gap-2">
+              <div className="w-1/2 h-full bg-gray-50 flex flex-col">
+                <div className="flex justify-center">
+                  <Image
+                    className="rounded-full mt-1"
+                    width={250}
+                    height={250}
+                    src="/images/hardhat.png"
+                  />
+                </div>
+
+                <div className="flex justify-center my-2 text-3xl font-bold">
+                  Hardhat
+                </div>
+              </div>
+              <div className="w-1/2 h-full bg-gray-50 flex flex-col">
+                <div className="flex justify-center">
+                  <Image
+                    className="rounded-full mt-1"
+                    width={250}
+                    height={250}
+                    src="/images/ethereum.jpeg"
+                  />
+                </div>
+
+                <div className="flex justify-center my-2 text-3xl font-bold">
+                  Ethereum
+                </div>
+              </div>
+            </div>
+          </div>
+        </Segment>
+
+        <Segment
+          className="bg-blue-300"
+          inverted
+          vertical
+          style={{ padding: "5em 5em 20em 5em", backgroundColor: "#2E8BC0" }}
+        >
           <Container>
             <Grid divided inverted stackable>
               <Grid.Row>
                 <Grid.Column width={3}>
-                  <Header inverted as="h4" content="About" />
+                  <Header inverted as="h2" content="About" />
                   <List link inverted>
-                    <List.Item as="a">Sitemap</List.Item>
-                    <List.Item as="a">Contact Us</List.Item>
-                    <List.Item as="a">Creator Info</List.Item>
-                    <List.Item as="a">Site Details</List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Sitemap
+                    </List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Contact Us
+                    </List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Creator Info
+                    </List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Site Details
+                    </List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
-                  <Header inverted as="h4" content="Services" />
+                  <Header inverted as="h2" content="Services" />
                   <List link inverted>
-                    <List.Item as="a">Create Blockchain System</List.Item>
-                    <List.Item as="a">Store Medical Record</List.Item>
-                    <List.Item as="a">How To Access</List.Item>
-                    <List.Item as="a">Favorite Ducks</List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Create Blockchain System
+                    </List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Store Medical Record
+                    </List.Item>
+                    <List.Item className="text-lg" as="a">
+                      How To Access
+                    </List.Item>
+                    <List.Item className="text-lg" as="a">
+                      Favorite Ducks
+                    </List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={7}>
-                  <Header as="h4" inverted>
+                  <Header as="h2" inverted>
                     Footer Header
                   </Header>
                   <p>
